@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu â€” MD Cakes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="data-loader.js"></script>
+<style>
+  .menu-list{ display:flex; flex-direction:column; gap:0; max-width:820px; }
+  .menu-item{
+    display:flex; justify-content:space-between; align-items:baseline; gap:20px;
+    padding:22px 0; border-bottom:1px dashed var(--line);
+  }
+  .menu-item .m-left h3{ font-size:1.15rem; margin-bottom:4px; }
+  .menu-item .m-left p{ color:var(--choc-soft); font-size:.9rem; max-width:48ch; }
+  .menu-item .m-price{ font-family:'Fraunces'; font-style:italic; color:var(--raspberry-deep); font-size:1.1rem; white-space:nowrap; }
+  .menu-cat{ margin-bottom:60px; }
+  .menu-note{
+    background:var(--cream-deep); border-radius:18px; padding:24px 28px; margin-top:10px;
+    font-size:.92rem; color:var(--choc-soft); max-width:820px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" fill="none">
+        <path d="M50 12 L88 82 A46 46 0 0 1 12 82 Z" fill="#C4506D"/>
+        <path d="M20 66 Q50 56 80 66" stroke="#FBF3EC" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="50" cy="18" r="4" fill="#E8B04B"/>
+      </svg>
+      <span class="brand-name">MD <span>Cakes</span></span>
+    </a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Order a Cake</a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="eyebrow">Our Menu</div>
+  <h1>Cakes &amp; treats</h1>
+  <p class="lead">Prices below are starting points â€” final pricing depends on size, design detail and flavour. Ask us for an exact quote when you order. <em>(All prices editable.)</em></p>
+</section>
+
+<section class="section" style="padding-top:20px;">
+
+  <div id="menuContainer"></div>
+
+  <div class="menu-note" id="menuNote"></div>
+
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="brand-name display" style="font-size:1.4rem;">MD Cakes</span>
+      <p class="tag">Handmade cakes from our kitchen in Kopay Irupalai, near Pyramid Education Centre.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact / Order</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Get In Touch</h5>
+      <ul>
+        <li><a href="tel:+94767041647">+94 76 704 1647</a></li>
+        <li><a href="mailto:seronjeyaseelan@gmail.com">seronjeyaseelan@gmail.com</a></li>
+        <li>Old Road, Kopay, Irupalai</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">Â© 2026 MD Cakes. All rights reserved.</div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  loadSiteData().then(data => {
+    renderMenu(data);
+  });
+</script>
+</body>
+</html>
